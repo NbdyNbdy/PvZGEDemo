@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca74anel3whb1"]
+
+[ext_resource type="Script" path="res://zombies/zombiearm.gd" id="1_cb52b"]
+[ext_resource type="Texture2D" uid="uid://bnwjl3roae02n" path="res://zombies/zombie/zombie_7.png" id="2_j1yq3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_buts7"]
+resource_name = "material_7"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_j1yq3")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0jhvi"]
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.148438, -0.03125, 0.203125, 0.28125, 1.00005e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_7",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_i65c2"]
+resource_name = "blockbench_export_mesh8"
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.148438, -0.03125, 0.203125, 0.28125, 1.00005e-05),
+"attribute_data": PackedByteArray(255, 95, 255, 159, 0, 0, 0, 0, 255, 95, 0, 0, 0, 0, 255, 159),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_buts7"),
+"name": "material_7",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0jhvi")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_27hc4"]
+points = PackedVector3Array(0.113826, 0.431933, -0.0290675, -0.0960325, 0.146195, -0.0335325, -0.0960325, 0.146195, -0.0290675, -0.0960325, 0.431933, -0.0335325, 0.113826, 0.146195, -0.0335325, 0.113826, 0.146195, -0.0290675, -0.0960325, 0.431933, -0.0290675, 0.113826, 0.431933, -0.0335325)
+
+[node name="Brzombie1Arm" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.10543e-15, 0)
+script = ExtResource("1_cb52b")
+
+[node name="armb" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.5, 0, -2.98023e-07, 0, 2.5, 0, 2.98023e-07, 0, -2.5, -7.45058e-09, -0.4, -0.1)
+mesh = SubResource("ArrayMesh_i65c2")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-2.5, 0, -2.98023e-07, 0, 2.5, 0, 2.98023e-07, 0, -2.5, -7.45058e-09, -0.4, -0.1)
+shape = SubResource("ConvexPolygonShape3D_27hc4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxdnx383mu2e8"]
+
+[ext_resource type="Texture2D" uid="uid://4dr7nqpvgkeq" path="res://projectiles/sun/sun.png" id="1_o17gp"]
+[ext_resource type="Script" path="res://projectiles/fallingsun/fallingsun.gd" id="1_qmeva"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cqiou"]
+size = Vector3(1.2, 1.1, 0.6)
+
+[node name="Fallingsun" type="RigidBody3D" groups=["normalsun"]]
+gravity_scale = 0.1
+script = ExtResource("1_qmeva")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 12.0
+autostart = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72529e-08, -0.0499999, 3.72529e-08)
+shape = SubResource("BoxShape3D_cqiou")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.02
+shaded = true
+texture_filter = 0
+texture = ExtResource("1_o17gp")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

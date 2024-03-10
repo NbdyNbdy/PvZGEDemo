@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://6767ut83chgm"]
+
+[ext_resource type="Texture2D" uid="uid://epwqujcdrk0a" path="res://ui/tileselect/tileselect.png" id="1_1mqxf"]
+
+[node name="Tileselect" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+pixel_size = 0.07
+texture_filter = 0
+texture = ExtResource("1_1mqxf")

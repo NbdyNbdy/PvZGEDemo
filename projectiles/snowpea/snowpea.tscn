@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://bv4ewlxbbmsp8"]
+
+[ext_resource type="Script" path="res://projectiles/snowpea/snowpea.gd" id="1_h12r6"]
+[ext_resource type="Texture2D" uid="uid://cq28p3uxxax4k" path="res://projectiles/snowpea/snowpea_0.png" id="2_gy8bx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cuvet"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_gy8bx")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dpagq"]
+_surfaces = [{
+"aabb": AABB(-0.09375, -0.0078125, 0, 0.15626, 0.15626, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(250, 255, 250, 255, 0, 0, 0, 0, 250, 255, 0, 0, 0, 0, 0, 0, 0, 0, 250, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_dgiof"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.09375, -0.0078125, 0, 0.15626, 0.15626, 1e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 95, 255, 95, 0, 0, 255, 95, 255, 95),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(2, 0, 1, 0, 0, 0, 2, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_cuvet"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(250, 255, 250, 255, 0, 0, 255, 255, 250, 255, 0, 0, 0, 0, 255, 255, 0, 0, 250, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_dpagq")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hbeyq"]
+points = PackedVector3Array(-0.0950405, -0.00902493, -0.00124023, 0.0637405, 0.149725, 0.00124023, 0.0637405, 0.149725, -0.00124023, -0.0950405, 0.149725, 0.00124023, 0.0637405, -0.00902493, 0.00124023, 0.0637405, -0.00902493, -0.00124023, -0.0950405, 0.149725, -0.00124023, -0.0950405, -0.00902493, 0.00124023)
+
+[node name="Snowpea" type="Area3D" groups=["normalpea"]]
+collision_mask = 2
+script = ExtResource("1_h12r6")
+
+[node name="snowpea" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.058, -0.256, 0)
+mesh = SubResource("ArrayMesh_dgiof")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0.058, -0.265, 0)
+shape = SubResource("ConvexPolygonShape3D_hbeyq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
