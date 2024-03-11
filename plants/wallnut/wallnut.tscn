@@ -1,0 +1,449 @@
+[gd_scene load_steps=34 format=3 uid="uid://5wbl5gy8ge16"]
+
+[ext_resource type="Script" path="res://plants/wallnut/wallnut.gd" id="1_q858w"]
+[ext_resource type="Texture2D" uid="uid://yuoi8agc0e2n" path="res://plants/wallnut/wallnut_0.png" id="1_t6wet"]
+[ext_resource type="Texture2D" uid="uid://b3yah6nskjuhy" path="res://plants/wallnut/wallnut_1.png" id="2_wkuyr"]
+[ext_resource type="Texture2D" uid="uid://b1qyjdm8g7412" path="res://plants/wallnut/wallnut_2.png" id="3_6wppc"]
+[ext_resource type="Texture2D" uid="uid://dis6f3q8vndxs" path="res://plants/wallnut/wallnut_3.png" id="4_3let7"]
+[ext_resource type="Texture2D" uid="uid://cucxtiyacopym" path="res://plants/wallnut/wallnut_4.png" id="5_8ow1l"]
+[ext_resource type="Texture2D" uid="uid://cjoao3fwine8h" path="res://plants/wallnut/wallnut_5.png" id="6_cfk6w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fm5lo"]
+size = Vector3(2, 0.1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cc2xe"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_t6wet")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1cqnr"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0, 0, 0.5, 0.625, 1e-05),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0, 4, 0, 0, 0, 5, 0, 4, 0, 3, 0, 0, 0, 3, 0, 6, 0, 1, 0, 3, 0, 7, 0, 6, 0, 8, 0, 3, 0, 4, 0, 8, 0, 7, 0, 3, 0, 9, 0, 5, 0, 0, 0, 9, 0, 10, 0, 5, 0, 11, 0, 1, 0, 6, 0, 11, 0, 12, 0, 1, 0),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 13,
+"vertex_data": PackedByteArray(255, 79, 255, 191, 0, 0, 0, 0, 255, 127, 152, 217, 0, 0, 0, 0, 255, 79, 152, 217, 0, 0, 0, 0, 255, 127, 255, 191, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 255, 79, 0, 0, 0, 0, 0, 0, 255, 255, 152, 217, 0, 0, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 127, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_knwki"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.25, 0, 0, 0.5, 0.625, 1e-05),
+"attribute_data": PackedByteArray(255, 87, 255, 39, 255, 63, 255, 23, 255, 87, 255, 23, 255, 63, 255, 39, 255, 63, 255, 159, 255, 87, 255, 39, 255, 87, 255, 159, 255, 63, 255, 39, 255, 63, 255, 39, 0, 0, 255, 23, 255, 63, 255, 23, 0, 0, 255, 39, 0, 0, 255, 159, 255, 63, 255, 159, 255, 63, 255, 39, 0, 0, 255, 39, 255, 127, 255, 39, 255, 87, 255, 39, 255, 87, 255, 159, 255, 127, 255, 159, 0, 0, 0, 0, 0, 0, 255, 23, 255, 63, 255, 23, 255, 63, 0, 0),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0, 4, 0, 5, 0, 6, 0, 4, 0, 7, 0, 5, 0, 8, 0, 9, 0, 10, 0, 8, 0, 11, 0, 9, 0, 12, 0, 14, 0, 13, 0, 12, 0, 15, 0, 14, 0, 16, 0, 18, 0, 17, 0, 16, 0, 19, 0, 18, 0, 20, 0, 22, 0, 21, 0, 20, 0, 23, 0, 22, 0),
+"material": SubResource("StandardMaterial3D_cc2xe"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(255, 79, 255, 191, 0, 0, 255, 255, 255, 127, 152, 217, 0, 0, 255, 255, 255, 79, 152, 217, 0, 0, 255, 255, 255, 127, 255, 191, 0, 0, 255, 255, 255, 127, 0, 0, 0, 0, 255, 255, 255, 79, 255, 191, 0, 0, 255, 255, 255, 79, 0, 0, 0, 0, 255, 255, 255, 127, 255, 191, 0, 0, 255, 255, 255, 127, 255, 191, 0, 0, 255, 255, 255, 255, 152, 217, 0, 0, 255, 255, 255, 127, 152, 217, 0, 0, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 0, 0, 0, 0, 255, 255, 255, 127, 255, 191, 0, 0, 255, 255, 255, 255, 255, 191, 0, 0, 255, 255, 0, 0, 255, 191, 0, 0, 255, 255, 255, 79, 255, 191, 0, 0, 255, 255, 255, 79, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 152, 217, 0, 0, 255, 255, 255, 127, 152, 217, 0, 0, 255, 255, 255, 127, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1cqnr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dha15"]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_wkuyr")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qgcfu"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0.53125, 0, 0.15626, 0.09376, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(250, 255, 248, 255, 0, 0, 0, 0, 250, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 248, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ix1vp"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(-0.25, 0.53125, 0, 0.15626, 0.09376, 1e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 63, 255, 95, 255, 63, 255, 95, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_dha15"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(250, 255, 248, 255, 0, 0, 255, 255, 250, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 248, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qgcfu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0h15"]
+resource_name = "material_2"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("3_6wppc")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_aea45"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0.46875, 0, 0.25, 0.15625, 1e-05),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0, 4, 0, 1, 0, 5, 0, 4, 0, 6, 0, 1, 0),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 7,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 159, 102, 102, 0, 0, 0, 0, 0, 0, 102, 102, 0, 0, 0, 0, 255, 159, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 102, 102, 0, 0, 0, 0, 255, 159, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_umgnq"]
+resource_name = "blockbench_export_mesh3"
+_surfaces = [{
+"aabb": AABB(-0.25, 0.46875, 0, 0.25, 0.15625, 1e-05),
+"attribute_data": PackedByteArray(255, 95, 255, 127, 0, 0, 255, 95, 255, 95, 255, 95, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 255, 63, 255, 63, 255, 63, 255, 63, 0, 0),
+"format": 34896613399,
+"index_count": 12,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0),
+"material": SubResource("StandardMaterial3D_p0h15"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 255, 159, 102, 102, 0, 0, 255, 255, 0, 0, 102, 102, 0, 0, 255, 255, 255, 159, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 102, 102, 0, 0, 255, 255, 255, 159, 102, 102, 0, 0, 255, 255, 255, 159, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_aea45")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eflth"]
+resource_name = "material_3"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("4_3let7")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r41vu"]
+_surfaces = [{
+"aabb": AABB(-0.078125, 0.3125, -0.015625, 0.06251, 0.03125, 9.99961e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(244, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 244, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s187a"]
+resource_name = "blockbench_export_mesh4"
+_surfaces = [{
+"aabb": AABB(-0.078125, 0.3125, -0.015625, 0.06251, 0.03125, 9.99961e-06),
+"attribute_data": PackedByteArray(0, 0, 255, 31, 255, 31, 0, 0, 255, 31, 255, 31, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_eflth"),
+"name": "material_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(244, 255, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 244, 255, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_r41vu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vyeld"]
+resource_name = "material_4"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("5_8ow1l")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bd02p"]
+_surfaces = [{
+"aabb": AABB(-0.109375, 0.34375, -0.015625, 0.03125, 0.03126, 9.99961e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"name": "material_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 234, 255, 0, 0, 0, 0, 255, 255, 234, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7l3ej"]
+resource_name = "blockbench_export_mesh5"
+_surfaces = [{
+"aabb": AABB(-0.109375, 0.34375, -0.015625, 0.03125, 0.03126, 9.99961e-06),
+"attribute_data": PackedByteArray(255, 31, 0, 0, 0, 0, 0, 0, 0, 0, 255, 31, 255, 31, 255, 31),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_vyeld"),
+"name": "material_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 234, 255, 0, 0, 255, 255, 255, 255, 234, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bd02p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8kwi"]
+resource_name = "material_5"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("6_cfk6w")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kkjtr"]
+_surfaces = [{
+"aabb": AABB(-0.015625, 0.34375, -0.015625, 0.03126, 0.03125, 9.99961e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"name": "material_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(234, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 234, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mop1a"]
+resource_name = "blockbench_export_mesh6"
+_surfaces = [{
+"aabb": AABB(-0.015625, 0.34375, -0.015625, 0.03126, 0.03125, 9.99961e-06),
+"attribute_data": PackedByteArray(0, 0, 255, 31, 255, 31, 255, 31, 255, 31, 0, 0, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_s8kwi"),
+"name": "material_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(234, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 234, 255, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kkjtr")
+
+[sub_resource type="Animation" id="Animation_78rc0"]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mouth1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(0, -0.065, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mouth2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(0, -0.03, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4eaev"]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mouth1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(0, -0.065, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mouth2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(0, -0.065, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5wunw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("mouth1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("mouth2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yjwkh"]
+_data = {
+"1": SubResource("Animation_78rc0"),
+"2": SubResource("Animation_4eaev"),
+"RESET": SubResource("Animation_5wunw")
+}
+
+[sub_resource type="Animation" id="Animation_q0hna"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wallnut:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 3.14159, -0.0349066)]
+}
+
+[sub_resource type="Animation" id="Animation_ad44j"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wallnut:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0, 3.14159, -0.0349066), Vector3(0, 3.14159, 0.0349066)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o7j67"]
+_data = {
+"RESET": SubResource("Animation_q0hna"),
+"idle": SubResource("Animation_ad44j")
+}
+
+[node name="Wallnut" type="StaticBody3D" groups=["plant", "selectable"]]
+script = ExtResource("1_q858w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, -4.47035e-08)
+shape = SubResource("BoxShape3D_fm5lo")
+
+[node name="wallnut" type="Node3D" parent="."]
+transform = Transform3D(-2.49848, -0.0872489, 6.33795e-06, -0.0872489, 2.49848, 0, -6.3341e-06, -2.21192e-07, -2.5, 0, 0, 0)
+
+[node name="wallnutbody" type="MeshInstance3D" parent="wallnut"]
+mesh = SubResource("ArrayMesh_knwki")
+skeleton = NodePath("")
+
+[node name="wallnut1" type="MeshInstance3D" parent="wallnut"]
+mesh = SubResource("ArrayMesh_ix1vp")
+skeleton = NodePath("")
+
+[node name="wallnut2" type="MeshInstance3D" parent="wallnut"]
+mesh = SubResource("ArrayMesh_umgnq")
+skeleton = NodePath("")
+
+[node name="mouth" type="Node3D" parent="wallnut"]
+transform = Transform3D(1, 5.82077e-11, 7.10543e-15, -5.82077e-11, 1, 0, -7.10543e-15, -3.46945e-18, 1, 0, 0, 0)
+
+[node name="mouth" type="MeshInstance3D" parent="wallnut/mouth"]
+transform = Transform3D(1, -2.39512e-16, -7.10543e-15, -2.39512e-16, 1, 0, 7.10543e-15, -2.22045e-16, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_s187a")
+skeleton = NodePath("")
+
+[node name="mouth2" type="MeshInstance3D" parent="wallnut/mouth"]
+transform = Transform3D(1, -2.39392e-16, -7.10543e-15, -2.39392e-16, 1, 8.27181e-25, 7.10543e-15, -2.22045e-16, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_7l3ej")
+skeleton = NodePath("")
+
+[node name="mouth1" type="MeshInstance3D" parent="wallnut/mouth"]
+transform = Transform3D(1, 6.93889e-18, 0, 6.93889e-18, 1, 8.27181e-25, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_mop1a")
+skeleton = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="wallnut/mouth"]
+libraries = {
+"": SubResource("AnimationLibrary_yjwkh")
+}
+playback_default_blend_time = 0.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_o7j67")
+}
+autoplay = "idle"
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.3, 1.4, -4.37114e-09)
+
+[node name="Marker3D2" type="Marker3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.4, 1.4, 4.37114e-09)
