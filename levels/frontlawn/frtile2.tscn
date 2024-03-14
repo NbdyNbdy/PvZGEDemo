@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://t7trna4xi6q6"]
+
+[ext_resource type="Texture2D" uid="uid://55sqw47lamvp" path="res://levels/frontlawn/frtile2.png" id="1_0747h"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ofm3n"]
+points = PackedVector3Array(1.01587, 0.015873, 1.01587, -1.01587, -0.015873, -1.01587, -1.01587, 0.015873, -1.01587, 1.01587, -0.015873, -1.01587, -1.01587, -0.015873, 1.01587, -1.01587, 0.015873, 1.01587, 1.01587, 0.015873, -1.01587, 1.01587, -0.015873, 1.01587)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_u63mh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_24tso"]
+albedo_texture = ExtResource("1_0747h")
+texture_filter = 0
+
+[node name="Frtile2" type="StaticBody3D" groups=["tile"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ofm3n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_u63mh")
+surface_material_override/0 = SubResource("StandardMaterial3D_24tso")
