@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://b37nw2eb74jae"]
+
+[ext_resource type="Texture2D" uid="uid://b3yah6nskjuhy" path="res://plants/wallnut/wallnut_1.png" id="1_bjbri"]
+[ext_resource type="Script" path="res://plants/wallnut/wallnut1.gd" id="1_wu7cs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dha15"]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_bjbri")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3or88"]
+_surfaces = [{
+"aabb": AABB(-0.25, 0.53125, 0, 0.15626, 0.09376, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(250, 255, 248, 255, 0, 0, 0, 0, 250, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 248, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_idro2"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(-0.25, 0.53125, 0, 0.15626, 0.09376, 1e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 63, 255, 95, 255, 63, 255, 95, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_dha15"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(250, 255, 248, 255, 0, 0, 255, 255, 250, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 248, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3or88")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_57um1"]
+points = PackedVector3Array(-0.25124, 0.53006, -0.00123968, -0.0925603, 0.626756, 0.00123968, -0.0925603, 0.626756, -0.00123968, -0.25124, 0.626756, 0.00123968, -0.0925603, 0.53006, 0.00123968, -0.0925603, 0.53006, -0.00123968, -0.25124, 0.626756, -0.00123968, -0.25124, 0.53006, 0.00123968)
+
+[node name="Wallnut1" type="RigidBody3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_wu7cs")
+
+[node name="wallnut1" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+mesh = SubResource("ArrayMesh_idro2")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_57um1")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
