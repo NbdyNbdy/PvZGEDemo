@@ -1,0 +1,1605 @@
+[gd_scene load_steps=63 format=3 uid="uid://c2nyutwce1vgg"]
+
+[ext_resource type="Script" path="res://zombies/zombie/zombie.gd" id="1_8gl8h"]
+[ext_resource type="Texture2D" uid="uid://cdlh4n4a0nm26" path="res://zombies/zombie/zombie_5.png" id="2_vslvh"]
+[ext_resource type="Texture2D" uid="uid://xmimxh1edv2r" path="res://zombies/zombie/zombie_6.png" id="3_fht58"]
+[ext_resource type="Texture2D" uid="uid://b3r86212gkjrc" path="res://zombies/zombie/zombie_3.png" id="4_e7v3y"]
+[ext_resource type="Texture2D" uid="uid://dknmqi5xvrdrq" path="res://zombies/zombie/zombie_4.png" id="5_x4ps7"]
+[ext_resource type="Texture2D" uid="uid://b636slyf733cd" path="res://zombies/zombie/zombie_1.png" id="6_ssw4a"]
+[ext_resource type="Texture2D" uid="uid://1r7e25rgshb7" path="res://zombies/zombie/zombie_0.png" id="7_fsijs"]
+[ext_resource type="Texture2D" uid="uid://bgf8x8d11epoo" path="res://zombies/zombie/zombie_2.png" id="8_ny1tt"]
+[ext_resource type="Texture2D" uid="uid://bnwjl3roae02n" path="res://zombies/zombie/zombie_7.png" id="9_ufitx"]
+[ext_resource type="Texture2D" uid="uid://npphjkyyx1w5" path="res://zombies/zombie/zombie_9.png" id="10_a0wtj"]
+[ext_resource type="Texture2D" uid="uid://bpmyul2npqegp" path="res://zombies/zombie/zombie_8.png" id="11_h5bxu"]
+[ext_resource type="Script" path="res://zombies/zombie/hitbox.gd" id="12_ugsg5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f66m4"]
+resource_name = "material_5"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("2_vslvh")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vra48"]
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.148438, -0.015625, 0.203135, 0.148448, 9.99961e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(251, 255, 250, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 251, 255, 0, 0, 0, 0, 0, 0, 0, 0, 250, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_57d4h"]
+resource_name = "blockbench_export_mesh6"
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.148438, -0.015625, 0.203135, 0.148448, 9.99961e-06),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 95, 255, 63, 0, 0, 255, 63, 255, 95, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_f66m4"),
+"name": "material_5",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(251, 255, 250, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 251, 255, 0, 0, 0, 0, 255, 255, 0, 0, 250, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vra48")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_seewt"]
+transparency = 1
+albedo_texture = ExtResource("2_vslvh")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0lc2c"]
+resource_name = "material_6"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("3_fht58")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8i6i4"]
+_surfaces = [{
+"aabb": AABB(-0.09375, 0, -0.015625, 0.203125, 0.148438, 9.99961e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"name": "material_6",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d4ikm"]
+resource_name = "blockbench_export_mesh7"
+_surfaces = [{
+"aabb": AABB(-0.09375, 0, -0.015625, 0.203125, 0.148438, 9.99961e-06),
+"attribute_data": PackedByteArray(255, 95, 255, 63, 255, 95, 0, 0, 0, 0, 0, 0, 0, 0, 255, 63),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_0lc2c"),
+"name": "material_6",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8i6i4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nnuts"]
+transparency = 1
+albedo_texture = ExtResource("3_fht58")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rx0o1"]
+resource_name = "material_3"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("4_e7v3y")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kwi0g"]
+_surfaces = [{
+"aabb": AABB(-0.015625, 0.148438, 0.015625, 0.242197, 0.148448, 1.00005e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(252, 255, 250, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 252, 255, 0, 0, 0, 0, 0, 0, 0, 0, 250, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a8sjq"]
+resource_name = "blockbench_export_mesh4"
+_surfaces = [{
+"aabb": AABB(-0.015625, 0.148438, 0.015625, 0.242197, 0.148448, 1.00005e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 127, 255, 63, 0, 0, 255, 63, 255, 127, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_rx0o1"),
+"name": "material_3",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(252, 255, 250, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 252, 255, 0, 0, 0, 0, 255, 255, 0, 0, 250, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kwi0g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlwkg"]
+transparency = 1
+albedo_texture = ExtResource("4_e7v3y")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_udntx"]
+resource_name = "material_4"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("5_x4ps7")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ap02y"]
+_surfaces = [{
+"aabb": AABB(-0.015625, 0, 0.015625, 0.242188, 0.148438, 1.00005e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"name": "material_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3qcj3"]
+resource_name = "blockbench_export_mesh5"
+_surfaces = [{
+"aabb": AABB(-0.015625, 0, 0.015625, 0.242188, 0.148438, 1.00005e-05),
+"attribute_data": PackedByteArray(255, 127, 255, 63, 255, 127, 0, 0, 0, 0, 0, 0, 0, 0, 255, 63),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_udntx"),
+"name": "material_4",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ap02y")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocj3s"]
+transparency = 1
+albedo_texture = ExtResource("5_x4ps7")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8smm"]
+resource_name = "material_1"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("6_ssw4a")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_05o4h"]
+_surfaces = [{
+"aabb": AABB(-0.132813, 0.265625, 0, 0.304688, 0.367188, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3r7mh"]
+resource_name = "blockbench_export_mesh2"
+_surfaces = [{
+"aabb": AABB(-0.132813, 0.265625, 0, 0.304688, 0.367188, 1e-05),
+"attribute_data": PackedByteArray(255, 159, 255, 191, 0, 0, 0, 0, 255, 159, 0, 0, 0, 0, 255, 191),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_j8smm"),
+"name": "material_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_05o4h")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xdx3b"]
+transparency = 1
+albedo_texture = ExtResource("6_ssw4a")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krgg3"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("7_fsijs")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3gbrj"]
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.546875, 0, 0.46876, 0.421875, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(253, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 253, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j5v02"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.546875, 0, 0.46876, 0.421875, 1e-05),
+"attribute_data": PackedByteArray(0, 0, 255, 223, 255, 255, 255, 223, 255, 255, 0, 0, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_krgg3"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(253, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 253, 255, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3gbrj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qydu6"]
+transparency = 1
+albedo_texture = ExtResource("7_fsijs")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y0ef6"]
+resource_name = "material_2"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("8_ny1tt")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8t2y7"]
+_surfaces = [{
+"aabb": AABB(-0.0546875, 0.335938, -0.015625, 0.101572, 0.304688, 9.99961e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(248, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 248, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tfx38"]
+resource_name = "blockbench_export_mesh3"
+_surfaces = [{
+"aabb": AABB(-0.0546875, 0.335938, -0.015625, 0.101572, 0.304688, 9.99961e-06),
+"attribute_data": PackedByteArray(0, 0, 255, 159, 255, 63, 0, 0, 255, 63, 255, 159, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_y0ef6"),
+"name": "material_2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(248, 255, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 248, 255, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_8t2y7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqjnb"]
+transparency = 1
+albedo_texture = ExtResource("8_ny1tt")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_buts7"]
+resource_name = "material_7"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("9_ufitx")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_e7b5o"]
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.148438, -0.03125, 0.203125, 0.28125, 1.00005e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_7",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_evl37"]
+resource_name = "blockbench_export_mesh8"
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.148438, -0.03125, 0.203125, 0.28125, 1.00005e-05),
+"attribute_data": PackedByteArray(255, 95, 255, 159, 0, 0, 0, 0, 255, 95, 0, 0, 0, 0, 255, 159),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_buts7"),
+"name": "material_7",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_e7b5o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqhn7"]
+transparency = 1
+albedo_texture = ExtResource("9_ufitx")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2w7f"]
+resource_name = "material_9"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("10_a0wtj")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gk21e"]
+_surfaces = [{
+"aabb": AABB(0.0703125, 0.425781, 0.015625, 0.101572, 0.214854, 1.00005e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_9",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(248, 255, 251, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 248, 255, 0, 0, 0, 0, 0, 0, 0, 0, 251, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_685ue"]
+resource_name = "blockbench_export_mesh10"
+_surfaces = [{
+"aabb": AABB(0.0703125, 0.425781, 0.015625, 0.101572, 0.214854, 1.00005e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 63, 255, 95, 0, 0, 255, 95, 255, 63, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_v2w7f"),
+"name": "material_9",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(248, 255, 251, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 248, 255, 0, 0, 0, 0, 255, 255, 0, 0, 251, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_gk21e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3e68v"]
+transparency = 1
+albedo_texture = ExtResource("10_a0wtj")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8qvc"]
+resource_name = "material_8"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("11_h5bxu")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7nc5g"]
+_surfaces = [{
+"aabb": AABB(0.03125, 0.148438, 0.03125, 0.203125, 0.28125, 9.99868e-06),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "material_8",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g5qh0"]
+resource_name = "blockbench_export_mesh9"
+_surfaces = [{
+"aabb": AABB(0.03125, 0.148438, 0.03125, 0.203125, 0.28125, 9.99868e-06),
+"attribute_data": PackedByteArray(255, 95, 255, 159, 0, 0, 0, 0, 255, 95, 0, 0, 0, 0, 255, 159),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_c8qvc"),
+"name": "material_8",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7nc5g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shjql"]
+transparency = 1
+albedo_texture = ExtResource("11_h5bxu")
+texture_filter = 0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kr8ua"]
+size = Vector3(1, 2.3, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pkfc6"]
+size = Vector3(1, 2.4, 1)
+
+[sub_resource type="Animation" id="Animation_avtey"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("zombie/lega:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.57851e-16, -2.84217e-14, -2.38419e-08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("zombie/leg2a:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("zombie/body:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("zombie/body:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.04, 0.44, -6.03984e-09)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("zombie/body/arma:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("zombie/body/arm2a:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("zombie/body/head:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("zombie/lega:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.08, 0.28, 1.20797e-08)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("zombie/leg2a:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.08, 0.28, -1.20797e-08)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("zombie/body/arma/armb:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.26326e-15, 1.42109e-14, -1.02997e-21)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("zombie/body/arm2a/arm2b:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.26326e-15, 1.42109e-14, -1.02997e-21)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("zombie/leg2a/leg2b:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("zombie/leg2a/leg2b:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.11759e-08, -0.16, -8.88178e-16)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("zombie/lega/legb:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("zombie/lega/legb:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.72529e-08, -0.16, -1.77636e-15)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("zombie:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.1, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mcvww"]
+resource_name = "die"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"headdeteach"
+}, {
+"args": [],
+"method": &"stopwalk"
+}, {
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("zombie/body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-1.50996e-07, 1.50996e-07, -1.5708)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("zombie/leg2a:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-1.50996e-07, 1.50996e-07, -1.5708)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("zombie/lega:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-1.50996e-07, 1.50996e-07, -1.5708)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("zombie/body/arma:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("zombie/body/arm2a:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-9.53692e-15, 3.01991e-07, 3.14159)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("zombie/body/arm2a/arm2b:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("zombie/body/head:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("zombie/leg2a/leg2b:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-1.50996e-07, 1.50996e-07, -1.5708), Vector3(0, 0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("zombie/leg2a/leg2b:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(1.11759e-08, -0.16, -8.88178e-16)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("zombie/lega/legb:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-1.50996e-07, 1.50996e-07, -1.5708), Vector3(-1.13687e-13, 7.10543e-14, 3.55272e-15)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("zombie/lega:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(-0.08, 0.28, 0), Vector3(-0.08, 0.2, 1.20797e-08), Vector3(-0.08, 0.08, 1.20797e-08)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("zombie/leg2a:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0.08, 0.28, 0), Vector3(0.08, 0.2, -1.20797e-08), Vector3(0.08, 0.04, -1.20797e-08)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("zombie/body:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector3(0.04, 0.44, -6.03984e-09), Vector3(0.04, 0.36, -6.03984e-09), Vector3(0.16, 0.08, -2.41593e-08)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("zombie/lega/legb:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(3.72529e-08, -0.16, -1.77636e-15)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("zombie:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.5, 0.6),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.3, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sfciv"]
+resource_name = "eat"
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"eat"
+}, {
+"args": [],
+"method": &"stopwalk"
+}, {
+"args": [],
+"method": &"eat"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("zombie/body/head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.0872665)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("zombie/body/arma:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(7.54978e-08, 2.02296e-08, 0.523599), Vector3(0, 0, 0.349066)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("zombie/body/arm2a:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0.349066), Vector3(0, 0, 0.523599)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("zombie/body/arma/armb:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.1, 0.6),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(1.45851e-07, 1.11915e-07, 1.309), Vector3(1.18242e-07, 6.88274e-08, 0.785398)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("zombie/body/arm2a/arm2b:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 0.6),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0.698132), Vector3(0, 0, 1.309)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("zombie/body:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.6, 0.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0.04, 0.38, 0), Vector3(0.04, 0.402347, -6.03984e-09), Vector3(0.04, 0.38, 0), Vector3(0.04, 0.402347, -6.03984e-09)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("zombie/lega:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -0.0872665)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("zombie/lega:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.08, 0.28, 1.20797e-08)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("zombie/leg2a:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0.0872665)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("zombie/leg2a:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.08, 0.28, -1.20797e-08)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("zombie:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_78iqw"]
+resource_name = "walk"
+length = 2.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("zombie/leg2a:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0.08, 0.28, -1.20797e-08), Vector3(0.08, 0.28, -1.20797e-08), Vector3(0, 0.28, 0), Vector3(0, 0.28, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("zombie/lega:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(-0.08, 0.28, 1.20797e-08), Vector3(-0.08, 0.28, 1.20797e-08), Vector3(0, 0.28, 0), Vector3(0, 0.28, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("zombie/lega:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(-3.90806e-08, 5.14502e-09, -0.261799), Vector3(-3.90806e-08, 5.14502e-09, -0.261799), Vector3(3.90806e-08, 5.14501e-09, 0.261799), Vector3(3.90806e-08, 5.14501e-09, 0.261799)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("zombie/leg2a:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(3.90806e-08, 5.14503e-09, 0.261799), Vector3(3.90806e-08, 5.14503e-09, 0.261799), Vector3(-3.90806e-08, 5.14502e-09, -0.261799), Vector3(-3.90806e-08, 5.14502e-09, -0.261799)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("zombie/body:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0.0872665), Vector3(0, 0, -0.0872665), Vector3(0, 0, 0.0872665), Vector3(0, 0, -0.0872665)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("zombie/body:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0.04, 0.44, -6.03984e-09), Vector3(0.04, 0.4, -6.03984e-09), Vector3(0.04, 0.44, -6.03984e-09), Vector3(0.04, 0.4, -6.03984e-09)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("zombie/body/arma:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-1.31601e-08, -5.74562e-10, -0.0872664), Vector3(0, 0, 0), Vector3(-1.31601e-08, -5.74562e-10, -0.0872664)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("zombie/body/arm2a:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.0872665), Vector3(0, 0, 0), Vector3(0, 0, -0.0872665)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("zombie/body/head:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector3(0, 0, 0.0872665), Vector3(0, 0, -0.0872665), Vector3(0, 0, 0.0872665), Vector3(0, 0, -0.0872665)]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"stopwalk"
+}, {
+"args": [],
+"method": &"walkforward"
+}, {
+"args": [],
+"method": &"stopwalk"
+}, {
+"args": [],
+"method": &"walkforward"
+}]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("zombie/body/arma/armb:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("zombie/body/arm2a/arm2b:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(-2),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("zombie:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f8umo"]
+_data = {
+"RESET": SubResource("Animation_avtey"),
+"die": SubResource("Animation_mcvww"),
+"eat": SubResource("Animation_sfciv"),
+"walk": SubResource("Animation_78iqw")
+}
+
+[sub_resource type="Animation" id="Animation_gc2ch"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("zombie/lega/lega:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("zombie/lega/legb/legb:surface_material_override/0:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("zombie/leg2a/leg2a:surface_material_override/0:albedo_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("zombie/leg2a/leg2b/leg2b:surface_material_override/0:albedo_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("zombie/body/body:surface_material_override/0:albedo_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("zombie/body/head/head:surface_material_override/0:albedo_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("zombie/body/arma/arma:surface_material_override/0:albedo_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("zombie/body/arma/armb/armb:surface_material_override/0:albedo_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("zombie/body/arm2a/arm2a:surface_material_override/0:albedo_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("zombie/body/arm2a/arm2b/arm2b:surface_material_override/0:albedo_color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_phheo"]
+resource_name = "chill"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("zombie/lega/lega:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("zombie/lega/legb/legb:surface_material_override/0:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("zombie/leg2a/leg2a:surface_material_override/0:albedo_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("zombie/leg2a/leg2b/leg2b:surface_material_override/0:albedo_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("zombie/body/body:surface_material_override/0:albedo_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("zombie/body/head/head:surface_material_override/0:albedo_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("zombie/body/arma/arma:surface_material_override/0:albedo_color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("zombie/body/arma/armb/armb:surface_material_override/0:albedo_color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("zombie/body/arm2a/arm2a:surface_material_override/0:albedo_color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("zombie/body/arm2a/arm2b/arm2b:surface_material_override/0:albedo_color")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0.6, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ol4tu"]
+_data = {
+"RESET": SubResource("Animation_gc2ch"),
+"chill": SubResource("Animation_phheo")
+}
+
+[node name="zombie" type="StaticBody3D" groups=["zombie"]]
+script = ExtResource("1_8gl8h")
+
+[node name="zombie" type="Node3D" parent="."]
+transform = Transform3D(-2.5, 0, 3.77489e-07, 0, 2.5, 0, -3.77489e-07, 0, -2.5, 0.1, 0, 0)
+
+[node name="lega" type="Node3D" parent="zombie"]
+transform = Transform3D(1, 2.38419e-08, -2.84217e-14, -2.38419e-08, 1, 7.57851e-16, 2.84217e-14, -7.5785e-16, 1, -0.08, 0.28, 1.20797e-08)
+
+[node name="lega" type="MeshInstance3D" parent="zombie/lega"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04, -0.28, -6.03983e-09)
+mesh = SubResource("ArrayMesh_57d4h")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_seewt")
+
+[node name="legb" type="Node3D" parent="zombie/lega"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72529e-08, -0.16, -1.77636e-15)
+
+[node name="legb" type="MeshInstance3D" parent="zombie/lega/legb"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04, -0.12, -6.03983e-09)
+mesh = SubResource("ArrayMesh_d4ikm")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nnuts")
+
+[node name="leg2a" type="Node3D" parent="zombie"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0.28, -1.20797e-08)
+
+[node name="leg2a" type="MeshInstance3D" parent="zombie/leg2a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12, -0.28, 1.81195e-08)
+mesh = SubResource("ArrayMesh_a8sjq")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_wlwkg")
+
+[node name="leg2b" type="Node3D" parent="zombie/leg2a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, -0.16, -8.88178e-16)
+
+[node name="leg2b" type="MeshInstance3D" parent="zombie/leg2a/leg2b"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12, -0.12, 1.81195e-08)
+mesh = SubResource("ArrayMesh_3qcj3")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_ocj3s")
+
+[node name="body" type="Node3D" parent="zombie"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04, 0.44, -6.03984e-09)
+
+[node name="body" type="MeshInstance3D" parent="zombie/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, -0.44, 6.03983e-09)
+mesh = SubResource("ArrayMesh_3r7mh")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_xdx3b")
+
+[node name="head" type="Node3D" parent="zombie/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, 0.32, -1.81195e-08)
+
+[node name="head" type="MeshInstance3D" parent="zombie/body/head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16, -0.76, 2.41593e-08)
+mesh = SubResource("ArrayMesh_j5v02")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_qydu6")
+
+[node name="arma" type="Node3D" parent="zombie/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, 0.16, 6.03983e-09)
+
+[node name="arma" type="MeshInstance3D" parent="zombie/body/arma"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.72529e-09, -0.6, 8.88178e-16)
+mesh = SubResource("ArrayMesh_tfx38")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_uqjnb")
+
+[node name="armb" type="Node3D" parent="zombie/body/arma"]
+transform = Transform3D(1, 1.02997e-21, 1.42109e-14, -1.02997e-21, 1, -4.26326e-15, -1.42109e-14, 4.26326e-15, 1, 8.19564e-08, -0.2, 0.04)
+
+[node name="armb" type="MeshInstance3D" parent="zombie/body/arma/armb"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+mesh = SubResource("ArrayMesh_evl37")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_mqhn7")
+
+[node name="arm2a" type="Node3D" parent="zombie/body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08, 0.16, -1.20797e-08)
+
+[node name="arm2a" type="MeshInstance3D" parent="zombie/body/arm2a"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12, -0.6, 1.81195e-08)
+mesh = SubResource("ArrayMesh_685ue")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_3e68v")
+
+[node name="arm2b" type="Node3D" parent="zombie/body/arm2a"]
+transform = Transform3D(1, 1.02997e-21, 1.42109e-14, -1.02997e-21, 1, -4.26326e-15, -1.42109e-14, 4.26326e-15, 1, 7.45058e-09, -0.2, -1.77636e-15)
+
+[node name="arm2b" type="MeshInstance3D" parent="zombie/body/arm2a/arm2b"]
+transform = Transform3D(1, 4.29156e-22, 0, 1.02997e-21, 1, -2.84216e-16, 1.42109e-14, -4.26326e-15, 1, -0.12, -0.4, 1.81195e-08)
+mesh = SubResource("ArrayMesh_g5qh0")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_shjql")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+shape = SubResource("BoxShape3D_kr8ua")
+disabled = true
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1.1, 0.1)
+
+[node name="Marker3D2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 1.7, 0)
+
+[node name="hitbox" type="Area3D" parent="." groups=["zombie"]]
+collision_layer = 3
+script = ExtResource("12_ugsg5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+shape = SubResource("BoxShape3D_pkfc6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f8umo")
+}
+autoplay = "walk"
+
+[node name="effectsap" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ol4tu")
+}
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6o33nowr0hp8"]
+
+[ext_resource type="Texture2D" uid="uid://1r7e25rgshb7" path="res://zombies/zombie/zombie_0.png" id="1_aspxh"]
+[ext_resource type="Script" path="res://zombies/zombie/zombiehead.gd" id="1_orp4b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krgg3"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_aspxh")
+texture_filter = 0
+texture_repeat = false
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wudyk"]
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.546875, 0, 0.46876, 0.421875, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(253, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 253, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p3yxw"]
+resource_name = "blockbench_export_mesh"
+_surfaces = [{
+"aabb": AABB(-0.09375, 0.546875, 0, 0.46876, 0.421875, 1e-05),
+"attribute_data": PackedByteArray(0, 0, 255, 223, 255, 255, 255, 223, 255, 255, 0, 0, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0),
+"material": SubResource("StandardMaterial3D_krgg3"),
+"name": "material_0",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(253, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 255, 255, 253, 255, 255, 255, 0, 0, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wudyk")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ho5ye"]
+points = PackedVector3Array(-0.0974741, 0.543179, -0.00372063, 0.378721, 0.974773, 0.00372063, 0.378721, 0.974773, -0.00372063, -0.0974741, 0.974773, 0.00372063, 0.378721, 0.543179, 0.00372063, 0.378721, 0.543179, -0.00372063, -0.0974741, 0.974773, -0.00372063, -0.0974741, 0.543179, 0.00372063)
+
+[node name="Zombiehead" type="RigidBody3D"]
+script = ExtResource("1_orp4b")
+
+[node name="head" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.5, 0, 2.18557e-07, 0, 2.5, 0, -2.18557e-07, 0, -2.5, 0.34, -1.86, 2.41593e-08)
+mesh = SubResource("ArrayMesh_p3yxw")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-2.5, 0, 2.18557e-07, 0, 2.5, 0, -2.18557e-07, 0, -2.5, 0.34, -1.86, 2.41593e-08)
+shape = SubResource("ConvexPolygonShape3D_ho5ye")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
